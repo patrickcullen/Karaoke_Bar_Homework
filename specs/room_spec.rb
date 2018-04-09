@@ -10,7 +10,7 @@ class RoomTest < MiniTest::Test
     @bar_name = "The Broken Finger"
     @bar_cash = 500
     @bar_drinks = [["Wine", 10],["Gin", 12],["Beer", 5]]
-    @bar_tabs = [{guest: "Andy Goram", running_tab: 20}]
+    @bar_tabs = {"Andy Goram" => 20}
     @bar = Bar.new(@bar_name, @bar_cash, @bar_drinks, @bar_tabs)
     @guest1 = Guest.new("Stuart Kennedy", 40, "Oops, I Did It Again")
     @guest2 = Guest.new("Alan Rough", 65, "Love Don't Live Here Anymore")
@@ -104,10 +104,10 @@ class RoomTest < MiniTest::Test
        @room1.compare_songs(@guest5.guest_fav_song))
   end
 
-  # Check if guest has a tab
+  # Does guest have a tab? Yes/No
 
   # def test_does_guest_have_tab()
-  #   assert_equal(true, @bar.does_guest_have_tab(@guest3.guest_name))
+  #   assert_equal(true, @bar_tabs.does_guest_have_tab(@guest3.guest_name))
   # end
 
   # Guest buys a drink, bar accepts fee

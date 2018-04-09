@@ -9,11 +9,17 @@ class Bar
     @bar_tabs = bar_tabs
   end
 
-  # def does_guest_have_tab(guest_with_tab)
-  #   # @bar_tabs[guest_with_tab] != nil ? true : false
-  #   @bar_tab.index { |x| x.include?(guest_with_tab) }
-  # end
+  # # does guest have tab already?
+  #
+    # def does_guest_have_tab(supplied_guest)
+    #   if @bar_tabs[supplied_guest] != nil
+    #     return true
+    #   else
+    #     return false
+    #   end
+    # end
 
+  # Increment bar total with fee for room or drink
 
   def bar_accepts_fee(fee)
     @bar_cash += fee
