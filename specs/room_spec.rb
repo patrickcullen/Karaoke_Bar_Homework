@@ -106,9 +106,19 @@ class RoomTest < MiniTest::Test
 
   # Does guest have a tab? Yes/No
 
-  # def test_does_guest_have_tab()
-  #   assert_equal(true, @bar_tabs.does_guest_have_tab(@guest3.guest_name))
-  # end
+  def test_does_guest_have_tab()
+    assert_equal(true, @bar.does_guest_have_tab(@guest3.guest_name))
+  end
+
+  def test_create_guest_tab()
+    @bar.create_guest_tab(@guest5.guest_name)
+    assert_equal(true, @bar.does_guest_have_tab(@guest5.guest_name))
+  end
+
+  def test_increment_guest_tab()
+    @bar.increment_guest_tab(@guest3.guest_name, 15)
+    assert_equal(35, @bar_tabs[@guest3.guest_name])
+  end
 
   # Guest buys a drink, bar accepts fee
 

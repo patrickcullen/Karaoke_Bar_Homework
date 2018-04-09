@@ -10,7 +10,7 @@ class BarTest < MiniTest::Test
     @bar_name = "The Broken Finger"
     @bar_cash = 500
     @bar_drinks = [["Wine", 10],["Gin", 12],["Beer", 5]]
-    @bar_tabs = [{guest: "Andy Goram", running_tab: 20}, {guest: "Stuart Kennedy", running_tab: 0}]
+    @bar_tabs = {"Andy Goram" => 20}
     @bar = Bar.new(@bar_name, @bar_cash, @bar_drinks, @bar_tabs)
     @guest1 = Guest.new("Stuart Kennedy", 40, "Oops, I Did It Again")
     @guest2 = Guest.new("Alan Rough", 65, "Love Don't Live Here Anymore")
